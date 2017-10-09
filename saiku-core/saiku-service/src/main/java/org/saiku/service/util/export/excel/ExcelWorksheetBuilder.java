@@ -818,7 +818,7 @@ public class ExcelWorksheetBuilder {
                 manageCellsMerge(y - 1, x, mergedCellsWidth + 1, startSameFromPos, mergedItemsConfig);
         }
 
-        if (topLeftCornerHeight > 0 && topLeftCornerWidth > 0) {
+        if (topLeftCornerHeight > 0 && topLeftCornerWidth > 0 && (topLeftCornerHeight + topLeftCornerWidth) > 2) {
             workbookSheet.addMergedRegion(
                     new CellRangeAddress(startRow, startRow + topLeftCornerHeight - 1, 0, topLeftCornerWidth - 1));
         }
